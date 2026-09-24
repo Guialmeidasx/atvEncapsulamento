@@ -1,17 +1,21 @@
 package br.edu.fatecpg.encapsulamento.model;
 
 public class Carro {
+    // MÉTODOS E ATRIBUTOS
     private String marca;
     private String modelo;
     private String placa;
     private double capacidadeTanque;
 
+    // MÉTODO CONSTRUTOR
     public Carro(String marca, String modelo, String placa, double capacidadeTanque) {
         this.marca = marca;
         this.modelo = modelo;
         this.placa = placa;
         this.capacidadeTanque = capacidadeTanque;
     }
+
+    // GETTERS E SETTERS
 
     public String getMarca() {
         return this.marca;
@@ -45,18 +49,21 @@ public class Carro {
         this.capacidadeTanque = capacidadeTanque;
     }
 
-    public void ligar() {
-        System.out.println("Carro ligado!");
+    // MÉTODOS
+
+    public String ligar() {
+        return "Carro ligado!";
     }
 
-    public void buzinar() {
-        System.out.println("Buzina: BIP BIP!");
+    public String buzinar() {
+        return "Bi Bi Bi";
     }
 
-    public void acelerar() {
-        System.out.println("Carro acelerando!");
+    public String acelerar(int vel) {
+        return "Você acelerou a " + vel + " KM/H";
     }
 
+    // Calcula o valor total para encher o tanque
     public double calcularValorTanque(double valorGasolina) {
         return this.capacidadeTanque * valorGasolina;
     }
